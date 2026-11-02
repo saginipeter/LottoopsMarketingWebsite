@@ -62,11 +62,10 @@ const navLinks = [
   ["Security", "#security"],
 ];
 
-function LogoMark({ light = false }: { light?: boolean }) {
+function LogoMark() {
   return (
     <a href="#top" className="brand" aria-label="LottoOps home">
-      <span className={`brand-mark ${light ? "brand-mark-light" : ""}`}><span>L</span></span>
-      <span className={light ? "brand-word brand-word-light" : "brand-word"}>Lotto<span>Ops</span></span>
+      <img className="brand-logo" src="/manus-storage/lottoops-logo-transparent_b588af09.png" alt="LottoOps" />
     </a>
   );
 }
@@ -84,7 +83,7 @@ export default function Home() {
     <div id="top" className="site-shell">
       <header className="site-header">
         <div className="site-container nav-row">
-          <LogoMark light />
+          <LogoMark />
           <nav className="desktop-nav" aria-label="Primary navigation">
             {navLinks.map(([label, href]) => <a key={label} href={href}>{label}</a>)}
           </nav>
@@ -199,7 +198,7 @@ export default function Home() {
         </section>
       </main>
 
-      <footer className="site-footer"><div className="site-container footer-top"><LogoMark light /><div className="footer-links"><a href="#product">Product</a><a href="#workflow">Workflow</a><a href="#security">Security</a><a href="https://lottoops.vercel.app/login">Customer sign in</a></div></div><div className="site-container footer-bottom"><span>© {new Date().getFullYear()} LottoOps. Built for lottery retail operations.</span><span>Designed for the people who keep every ticket accountable.</span></div></footer>
+      <footer className="site-footer"><div className="site-container footer-top"><LogoMark /><div className="footer-links"><a href="#product">Product</a><a href="#workflow">Workflow</a><a href="#security">Security</a><a href="https://lottoops.vercel.app/login">Customer sign in</a></div></div><div className="site-container footer-bottom"><span>© {new Date().getFullYear()} LottoOps. Built for lottery retail operations.</span><span>Designed for the people who keep every ticket accountable.</span></div></footer>
     </div>
   );
 }
