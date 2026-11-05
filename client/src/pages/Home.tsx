@@ -5,7 +5,6 @@ import {
   BadgeCheck,
   BarChart3,
   Check,
-  ChevronRight,
   ClipboardCheck,
   Menu,
   MonitorSmartphone,
@@ -15,7 +14,6 @@ import {
   Sparkles,
   Ticket,
   X,
-  Zap,
 } from "lucide-react";
 
 type TourKey = "receive" | "sell" | "display" | "close";
@@ -75,26 +73,13 @@ function Logo() {
 
 function ProductBoard() {
   return (
-    <div className="board-scene" aria-label="Illustration of a LottoOps customer display board">
+    <figure className="board-scene" aria-label="Selected screenshot from the real LottoOps customer TV display">
       <div className="board-glow" />
-      <div className="display-device">
-        <div className="display-topline"><span><i /> CUSTOMER DISPLAY / SCREEN 01</span><span>CONNECTED</span></div>
-        <div className="display-heading"><div><span>LOTTOOPS DISPLAY BOARD</span><strong>Find your next favorite.</strong></div><span className="display-live"><i />LIVE</span></div>
-        <div className="ticket-grid" aria-hidden="true">
-          <div className="ticket-art art-cyan"><small>TX · 05</small><strong>LUCKY<br />LINES</strong><span>$5</span></div>
-          <div className="ticket-art art-coral"><small>TX · 12</small><strong>GOLD<br />RUSH</strong><span>$10</span></div>
-          <div className="ticket-art art-violet"><small>TX · 08</small><strong>TRIPLE<br />CASH</strong><span>$2</span></div>
-          <div className="ticket-art art-amber"><small>TX · 21</small><strong>BIG<br />WIN</strong><span>$20</span></div>
-          <div className="ticket-art art-blue"><small>TX · 17</small><strong>LUCKY<br />7s</strong><span>$3</span></div>
-          <div className="ticket-art art-teal"><small>TX · 03</small><strong>WORD<br />PLAY</strong><span>$5</span></div>
-          <div className="ticket-art art-rose"><small>TX · 14</small><strong>JACKPOT<br />BONUS</strong><span>$10</span></div>
-          <div className="ticket-art art-green"><small>TX · 09</small><strong>QUICK<br />CASH</strong><span>$1</span></div>
-        </div>
-        <div className="display-bottom"><span>GAME ARTWORK</span><span>LIVE TICKET POSITION</span><span>MANAGED IN LOTTOOPS</span></div>
+      <div className="display-device product-shot-frame">
+        <img className="product-screenshot tv-board-screenshot" src="/manus-storage/lottoops-tv-board-teaser_91aed21f.jpg" alt="A selected crop of the real LottoOps TV display showing a few scratch-ticket artwork tiles." loading="lazy" decoding="async" />
       </div>
-      <div className="board-float board-float-top"><span className="float-icon"><MonitorSmartphone size={16} /></span><span><small>DISPLAY STATUS</small><strong>Screen is current</strong></span><BadgeCheck size={18} /></div>
-      <div className="board-float board-float-bottom"><span className="float-pulse" /><span><small>COUNTER TO CUSTOMER</small><strong>One connected view</strong></span><ArrowDownRight size={18} /></div>
-    </div>
+      <figcaption className="product-shot-caption"><span><i /> REAL TV DISPLAY / SELECTED TILES</span><span>FEATURE PREVIEW</span></figcaption>
+    </figure>
   );
 }
 
@@ -103,7 +88,6 @@ export default function Home() {
   const [activeWorkflow, setActiveWorkflow] = useState<TourKey>("receive");
   const [demoState, setDemoState] = useState(false);
   const active = workflows[activeWorkflow];
-  const ActiveIcon = active.icon;
   const closeMenu = () => setMenuOpen(false);
   const prepareDemoRequest = (form: HTMLFormElement) => {
     const values = new FormData(form);
@@ -146,7 +130,6 @@ export default function Home() {
           <div className="hero-shade" aria-hidden="true" />
           <div className="site-container hero-grid">
             <div className="hero-copy">
-              <div className="eyebrow eyebrow-light"><span className="status-dot" />Lottery retail operations, connected</div>
               <h1 id="hero-title">Every ticket.<br />From delivery <em>to close.</em></h1>
               <p className="hero-summary">One clear workflow for receiving lottery stock, selling tickets, managing customer displays, and reconciling every shift.</p>
               <div className="hero-actions">
@@ -156,19 +139,9 @@ export default function Home() {
               <div className="hero-proof"><span><Check size={15} />Built for the retail floor</span><span><Check size={15} />Touch-friendly workflows</span><span><Check size={15} />Role-aware access</span></div>
             </div>
             <div className="hero-preview-wrap">
-              <div className="preview-label"><span>THE LOTTOOPS WORKSPACE</span><span><i /> PRODUCT PREVIEW</span></div>
-              <div className="hero-console">
-                <div className="console-top"><span className="console-brand"><span className="console-mark">L</span> STORE OPERATIONS</span><span className="console-store">DEMO STORE <ChevronRight size={12} /></span></div>
-                <div className="console-heading"><div><p>YOUR LOTTERY WORK, CONNECTED</p><strong>One shift at a time.</strong></div><span className="console-shield"><ShieldCheck size={19} /></span></div>
-                <div className="console-rows">
-                  <div className="console-row"><span className="console-row-icon teal-wash"><PackageCheck size={18} /></span><span><strong>Receive stock</strong><small>Shipment and pack intake</small></span><b className="row-state">READY</b><ChevronRight size={15} /></div>
-                  <div className="console-row"><span className="console-row-icon coral-wash"><ScanLine size={18} /></span><span><strong>Sell tickets</strong><small>Scan and validate position</small></span><b className="row-state">POS</b><ChevronRight size={15} /></div>
-                  <div className="console-row"><span className="console-row-icon amber-wash"><MonitorSmartphone size={18} /></span><span><strong>Manage displays</strong><small>Keep customer screens current</small></span><b className="row-state">LIVE</b><ChevronRight size={15} /></div>
-                  <div className="console-row"><span className="console-row-icon blue-wash"><ClipboardCheck size={18} /></span><span><strong>Reconcile shift</strong><small>Audit, count, and hand over</small></span><b className="row-state">CLEAR</b><ChevronRight size={15} /></div>
-                </div>
-                <div className="console-foot"><span><Zap size={14} />A connected view of the work</span><span>LOTTOOPS</span></div>
-              </div>
-              <div className="preview-caption"><span>Illustrative interface</span><span>Purpose-built for lottery retail</span></div>
+              <div className="preview-label"><span>REAL LOTTOOPS WORKSPACE</span><span><i /> SELECTED PRODUCT VIEW</span></div>
+              <div className="hero-workspace-frame"><img className="product-screenshot workspace-screenshot" src="/manus-storage/lottoops-workspace-teaser_fab5a2b1.jpg" alt="A cropped real LottoOps workspace showing selected POS, shift, receiving, reports, and stock modules." fetchPriority="high" decoding="async" /></div>
+              <div className="preview-caption"><span>Real product screenshot</span><span>Selected modules only</span></div>
             </div>
           </div>
           <div className="hero-ribbon"><div className="site-container"><span>RECEIVE</span><i /><span>SELL</span><i /><span>DISPLAY</span><i /><span>RECONCILE</span><i /><span>REPORT</span><span className="ribbon-note">One connected operation</span></div></div>
@@ -218,7 +191,10 @@ export default function Home() {
               </div>
               <div className="workflow-preview" id="workflow-panel" role="tabpanel" aria-labelledby={`workflow-${activeWorkflow}`}>
                 <div className="preview-copy"><p className="eyebrow eyebrow-small">{active.label}</p><h3>{active.title}</h3><p>{active.copy}</p><a href="#demo" className="inline-link">Talk through your workflow <ArrowRight size={16} /></a><div className="preview-stats"><span>WORK AREA</span><strong>{active.metric}</strong></div></div>
-                <div className="workflow-ui" aria-label="Illustrative LottoOps workflow screen"><div className="ui-topbar"><span className="ui-brand"><span>L</span> LottoOps</span><span>Store operations <ChevronRight size={12} /> {active.label}</span><span className="ui-user">OP</span></div><div className="ui-app"><aside className="ui-sidebar"><span className="ui-side-active"><ActiveIcon size={16} /></span><span><PackageCheck size={15} /></span><span><ScanLine size={15} /></span><span><MonitorSmartphone size={15} /></span><span><BarChart3 size={15} /></span></aside><div className="ui-main"><div className="ui-welcome"><div><small>LOTTERY OPERATIONS</small><strong>{active.title}</strong></div><span className="ui-pill"><i />READY</span></div><div className="ui-action-card"><div className="ui-action-icon"><ActiveIcon size={21} /></div><div><small>YOUR NEXT ACTION</small><strong>{active.metric}</strong><span>{active.copy}</span></div><ArrowRight size={17} /></div><div className="ui-detail-grid"><div><small>WORKFLOW</small><b>{active.label}</b><span>Recorded in your store workspace</span></div><div><small>TEAM ACCESS</small><b>Role-aware</b><span>Each team member sees the right tools</span></div><div><small>STORE RECORD</small><b>Connected</b><span>Review activity when the shift is done</span></div></div></div></div></div>
+                <figure className="workflow-real-preview">
+                  <img className="product-screenshot" src={activeWorkflow === "display" ? "/manus-storage/lottoops-tv-board-teaser_91aed21f.jpg" : "/manus-storage/lottoops-workspace-teaser_fab5a2b1.jpg"} alt={activeWorkflow === "display" ? "Selected artwork tiles from the real LottoOps TV display, with live store details hidden." : "Selected modules from the real LottoOps workspace; detailed workflows are reserved for a private walkthrough."} loading="lazy" decoding="async" />
+                  <figcaption>Real {activeWorkflow === "display" ? "TV display" : "workspace"} screenshot · Selected view only</figcaption>
+                </figure>
               </div>
             </div>
             <div className="workflow-steps">{steps.map(({ number, title, copy, icon: Icon }) => <article key={number} className="step-card"><span className="step-number">{number}</span><Icon size={20} /><h3>{title}</h3><p>{copy}</p></article>)}</div>

@@ -154,6 +154,10 @@ h1 em, .display-copy h2 em { color: #82DCE8; font-style: normal; }
 .console-foot { display: flex; align-items: center; justify-content: space-between; padding: 11px 17px; border-top: 1px solid #E4E9F0; color: #768397; font-family: "DM Mono", monospace; font-size: 7px; letter-spacing: .6px; }
 .console-foot span:first-child { display: inline-flex; align-items: center; gap: 5px; color: #167F89; }
 .preview-caption { padding: 12px 1px 0; font-size: 7px; text-transform: uppercase; }
+.hero-workspace-frame { overflow: hidden; border: 1px solid rgba(255,255,255,.2); background: #F4F7FB; box-shadow: 0 22px 52px rgba(2,12,26,.28); }
+.product-screenshot { display: block; width: 100%; height: auto; }
+.workspace-screenshot { aspect-ratio: 857 / 395; object-fit: cover; }
+.preview-caption span:last-child { color: #91BFCB; }
 .hero-ribbon { position: absolute; right: 0; bottom: 0; left: 0; border-top: 1px solid rgba(255,255,255,.16); background: rgba(5,17,34,.35); }
 .hero-ribbon .site-container { display: flex; align-items: center; gap: 17px; min-height: 48px; color: rgba(255,255,255,.68); font-family: "DM Mono", monospace; font-size: 8px; letter-spacing: 1.1px; }
 .hero-ribbon i { width: 4px; height: 4px; border-radius: 50%; background: var(--teal-bright); }
@@ -194,9 +198,15 @@ h1 em, .display-copy h2 em { color: #82DCE8; font-style: normal; }
 .display-checks svg { flex: 0 0 auto; color: #82DCE8; }
 .display-copy .button { min-height: 45px; font-size: 10px; }
 .display-copy .hardware-note { margin-top: 13px; color: rgba(255,255,255,.4); font-size: 8px; }
-.board-scene { position: relative; padding: 30px 4px 26px; }
+.board-scene { position: relative; display: block; min-width: 0; padding: 30px 4px 26px; margin: 0; }
 .board-glow { position: absolute; inset: 16% 7%; border-radius: 50%; background: rgba(13,130,166,.24); filter: blur(62px); }
 .display-device { position: relative; z-index: 1; padding: 18px; border: 1px solid rgba(255,255,255,.21); background: linear-gradient(145deg,#10243d,#0b1729); box-shadow: 0 30px 78px rgba(0,0,0,.42), inset 0 1px rgba(255,255,255,.1); transform: perspective(1100px) rotateY(-4deg) rotateX(1deg); }
+.product-shot-frame { overflow: hidden; padding: 0; border-color: rgba(255,255,255,.3); background: #000; transform: none; }
+.product-shot-frame .product-screenshot { width: 100%; height: auto; }
+.product-shot-caption { position: relative; z-index: 1; display: flex; align-items: center; justify-content: space-between; gap: 10px; padding: 13px 2px 0; color: rgba(255,255,255,.58); font-family: "DM Mono", monospace; font-size: 8px; letter-spacing: .75px; }
+.product-shot-caption span:first-child { display: inline-flex; align-items: center; gap: 7px; }
+.product-shot-caption i { width: 6px; height: 6px; border-radius: 50%; background: #60CFAC; box-shadow: 0 0 0 4px rgba(96,207,172,.12); }
+.product-shot-caption span:last-child { color: #82DCE8; }
 .display-topline { display: flex; align-items: center; justify-content: space-between; color: rgba(255,255,255,.44); font-family: "DM Mono", monospace; font-size: 7px; letter-spacing: .9px; }
 .display-topline span:first-child { display: inline-flex; align-items: center; gap: 7px; }
 .display-topline i { width: 5px; height: 5px; border-radius: 50%; background: #60CFAC; box-shadow: 0 0 0 4px rgba(96,207,172,.12); }
@@ -277,6 +287,9 @@ h1 em, .display-copy h2 em { color: #82DCE8; font-style: normal; }
 .ui-detail-grid small { color: #8994A6; font-family: "DM Mono", monospace; font-size: 5px; letter-spacing: .4px; }
 .ui-detail-grid b { margin-top: 7px; color: #273653; font-size: 8px; }
 .ui-detail-grid span { margin-top: 3px; color: #8792A2; font-size: 6px; line-height: 1.35; }
+.workflow-real-preview { align-self: center; min-width: 0; margin: 0; overflow: hidden; border: 1px solid #D9E0E9; background: #F4F7FB; box-shadow: 0 14px 32px rgba(23,35,63,.08); }
+.workflow-real-preview .product-screenshot { height: auto; max-height: 320px; object-fit: contain; background: #000; }
+.workflow-real-preview figcaption { padding: 12px; color: #526078; background: #FFF; font-size: 11px; line-height: 1.5; }
 .workflow-steps { display: grid; grid-template-columns: repeat(4,1fr); margin-top: 22px; border: 1px solid #D9E0E9; background: #fff; }
 .step-card { position: relative; min-height: 135px; padding: 20px; border-right: 1px solid #E1E6ED; }
 .step-card:last-child { border-right: 0; }
@@ -431,6 +444,8 @@ h1 em, .display-copy h2 em { color: #82DCE8; font-style: normal; }
   .display-copy > p { font-size: 11px; }
   .board-scene { padding: 29px 0 28px; }
   .display-device { padding: 11px; transform: none; }
+  .display-device.product-shot-frame { padding: 0; }
+  .product-shot-caption { font-size: 6px; letter-spacing: .35px; }
   .display-topline { font-size: 5px; }
   .display-heading { padding: 13px 0 11px; }
   .display-heading strong { font-size: 15px; }
