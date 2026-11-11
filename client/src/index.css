@@ -106,7 +106,7 @@ button:focus-visible, a:focus-visible, input:focus-visible, select:focus-visible
 .menu-trigger, .mobile-nav { display: none; }
 
 .hero-section { position: relative; min-height: 760px; color: #fff; background: var(--navy-deep); isolation: isolate; }
-.hero-photo { position: absolute; z-index: -3; inset: 0; background: url('/manus-storage/lottoops-hero-operations_a290d6f9.jpg') 50% 44%/cover no-repeat; transform: scale(1.02); }
+.hero-photo { position: absolute; z-index: -3; inset: 0; background: url('https://fo8ms6xw9kujwlqi.public.blob.vercel-storage.com/lottoops-hero-operations.webp') 50% 44%/cover no-repeat; transform: scale(1.02); }
 .hero-shade { position: absolute; z-index: -2; inset: 0; background: linear-gradient(90deg, rgba(7,20,40,.97) 0%, rgba(10,27,50,.94) 31%, rgba(11,28,51,.78) 56%, rgba(9,25,47,.48) 100%), linear-gradient(0deg, rgba(6,18,37,.82) 0%, transparent 50%); }
 .hero-section::after { position: absolute; z-index: -1; inset: 0; background-image: linear-gradient(rgba(255,255,255,.035) 1px, transparent 1px), linear-gradient(90deg, rgba(255,255,255,.035) 1px, transparent 1px); background-size: 56px 56px; content: ""; mask-image: linear-gradient(90deg, black, transparent 76%); }
 .hero-grid { min-height: 700px; display: grid; grid-template-columns: minmax(0,.95fr) minmax(420px,1.05fr); align-items: center; gap: 64px; padding-top: 88px; padding-bottom: 53px; }

@@ -66,7 +66,7 @@ const steps = [
 function Logo() {
   return (
     <a href="#top" className="brand" aria-label="LottoOps home">
-      <img className="brand-logo" src="/manus-storage/lottoops-logo-transparent_b588af09.png" alt="LottoOps" />
+      <img className="brand-logo" src="https://fo8ms6xw9kujwlqi.public.blob.vercel-storage.com/lottoops-logo-transparent.png" alt="LottoOps" />
     </a>
   );
 }
@@ -76,7 +76,7 @@ function ProductBoard() {
     <figure className="board-scene" aria-label="Selected screenshot from the real LottoOps customer TV display">
       <div className="board-glow" />
       <div className="display-device product-shot-frame">
-        <img className="product-screenshot tv-board-screenshot" src="/manus-storage/lottoops-tv-board-teaser_91aed21f.jpg" alt="A selected crop of the real LottoOps TV display showing a few scratch-ticket artwork tiles." loading="lazy" decoding="async" />
+        <img className="product-screenshot tv-board-screenshot" src="https://fo8ms6xw9kujwlqi.public.blob.vercel-storage.com/lottoops-tv-board-teaser.webp" alt="A selected crop of the real LottoOps TV display showing a few scratch-ticket artwork tiles." loading="lazy" decoding="async" />
       </div>
       <figcaption className="product-shot-caption"><span><i /> REAL TV DISPLAY / SELECTED TILES</span><span>FEATURE PREVIEW</span></figcaption>
     </figure>
@@ -140,7 +140,7 @@ export default function Home() {
             </div>
             <div className="hero-preview-wrap">
               <div className="preview-label"><span>REAL LOTTOOPS WORKSPACE</span><span><i /> SELECTED PRODUCT VIEW</span></div>
-              <div className="hero-workspace-frame"><img className="product-screenshot workspace-screenshot" src="/manus-storage/lottoops-workspace-teaser_fab5a2b1.jpg" alt="A cropped real LottoOps workspace showing selected POS, shift, receiving, reports, and stock modules." fetchPriority="high" decoding="async" /></div>
+              <div className="hero-workspace-frame"><img className="product-screenshot workspace-screenshot" src="https://fo8ms6xw9kujwlqi.public.blob.vercel-storage.com/lottoops-workspace-teaser.webp" alt="A cropped real LottoOps workspace showing selected POS, shift, receiving, reports, and stock modules." fetchPriority="high" decoding="async" /></div>
               <div className="preview-caption"><span>Real product screenshot</span><span>Selected modules only</span></div>
             </div>
           </div>
@@ -192,7 +192,7 @@ export default function Home() {
               <div className="workflow-preview" id="workflow-panel" role="tabpanel" aria-labelledby={`workflow-${activeWorkflow}`}>
                 <div className="preview-copy"><p className="eyebrow eyebrow-small">{active.label}</p><h3>{active.title}</h3><p>{active.copy}</p><a href="#demo" className="inline-link">Talk through your workflow <ArrowRight size={16} /></a><div className="preview-stats"><span>WORK AREA</span><strong>{active.metric}</strong></div></div>
                 <figure className="workflow-real-preview">
-                  <img className="product-screenshot" src={activeWorkflow === "display" ? "/manus-storage/lottoops-tv-board-teaser_91aed21f.jpg" : "/manus-storage/lottoops-workspace-teaser_fab5a2b1.jpg"} alt={activeWorkflow === "display" ? "Selected artwork tiles from the real LottoOps TV display, with live store details hidden." : "Selected modules from the real LottoOps workspace; detailed workflows are reserved for a private walkthrough."} loading="lazy" decoding="async" />
+                  <img className="product-screenshot" src={activeWorkflow === "display" ? "https://fo8ms6xw9kujwlqi.public.blob.vercel-storage.com/lottoops-tv-board-teaser.webp" : "https://fo8ms6xw9kujwlqi.public.blob.vercel-storage.com/lottoops-workspace-teaser.webp"} alt={activeWorkflow === "display" ? "Selected artwork tiles from the real LottoOps TV display, with live store details hidden." : "Selected modules from the real LottoOps workspace; detailed workflows are reserved for a private walkthrough."} loading="lazy" decoding="async" />
                   <figcaption>Real {activeWorkflow === "display" ? "TV display" : "workspace"} screenshot · Selected view only</figcaption>
                 </figure>
               </div>
