@@ -139,7 +139,7 @@ export default function Home() {
               <div className="hero-proof"><span><Check size={15} />Built for the retail floor</span><span><Check size={15} />Touch-friendly workflows</span><span><Check size={15} />Role-aware access</span></div>
             </div>
             <div className="hero-preview-wrap">
-              <div className="preview-label"><span>REAL LOTTOOPS WORKSPACE</span><span><i /> SELECTED PRODUCT VIEW</span></div>
+              <div className="preview-label"><span>REAL LOTTOOPS WORKSPACE</span></div>
               <div className="hero-workspace-frame"><img className="product-screenshot workspace-screenshot" src="https://fo8ms6xw9kujwlqi.public.blob.vercel-storage.com/lottoops-workspace-teaser.webp" alt="A cropped real LottoOps workspace showing selected POS, shift, receiving, reports, and stock modules." fetchPriority="high" decoding="async" /></div>
               <div className="preview-caption"><span>Real product screenshot</span><span>Selected modules only</span></div>
             </div>
